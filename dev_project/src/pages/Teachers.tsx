@@ -6,16 +6,14 @@ export default function Teachers() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
                     {/* Wu Huanran */}
-                    <div className="group bg-[var(--surface)] rounded-2xl overflow-hidden border border-white/5 hover:border-[var(--primary-gold)]/50 transition-all duration-300">
+                    <div className="group bg-[var(--surface)] rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300">
                         <div className="relative h-96 overflow-hidden">
                             {/* Placeholder for Teacher Image */}
-                            <div className="absolute inset-0 bg-gray-800 flex items-center justify-center text-gray-600">
-                                [吳煥然老師 形象照]
-                            </div>
+                            <img src="https://images.unsplash.com/photo-1552062637-642157d6051c?w=800&q=80" alt="吳煥然 老師" className="w-full h-full object-cover object-top" />
                             {/* Overlay for Name */}
                             <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/90 to-transparent">
                                 <h2 className="text-3xl font-bold text-white mb-1">吳煥然 老師</h2>
-                                <p className="text-[var(--primary-gold)] uppercase tracking-wider text-sm font-bold">Founder / Champion</p>
+                                <p className="text-primary uppercase tracking-wider text-sm font-bold">Founder / Champion</p>
                             </div>
                         </div>
                         <div className="p-8 space-y-6">
@@ -41,15 +39,13 @@ export default function Teachers() {
                     </div>
 
                     {/* He Bozhen */}
-                    <div className="group bg-[var(--surface)] rounded-2xl overflow-hidden border border-white/5 hover:border-[var(--primary-gold)]/50 transition-all duration-300">
+                    <div className="group bg-[var(--surface)] rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300">
                         <div className="relative h-96 overflow-hidden">
                             {/* Placeholder for Teacher Image */}
-                            <div className="absolute inset-0 bg-gray-800 flex items-center justify-center text-gray-600">
-                                [何柏蓁老師 形象照]
-                            </div>
+                            <img src="https://images.unsplash.com/photo-1516475429286-465d815a0df7?w=800&q=80" alt="何柏蓁 老師" className="w-full h-full object-cover object-top" />
                             <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/90 to-transparent">
                                 <h2 className="text-3xl font-bold text-white mb-1">何柏蓁 老師</h2>
-                                <p className="text-[var(--primary-gold)] uppercase tracking-wider text-sm font-bold">Co-Founder / Top Instructor</p>
+                                <p className="text-primary uppercase tracking-wider text-sm font-bold">Co-Founder / Top Instructor</p>
                             </div>
                         </div>
                         <div className="p-8 space-y-6">

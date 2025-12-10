@@ -5,6 +5,7 @@
 :root {
     --background: #0d0d12;
     --foreground: #f0f0f0;
+    --primary-gold: #D4AF37; /* Keep for specific highlights if needed, or replace usage */
 }
 
 @layer base {

@@ -45,7 +45,7 @@ function NavItem({ to, label }: { to: string; label: string }) {
         <NavLink
             to={to}
             className={({ isActive }) =>
-                `text-[var(--foreground)] hover:text-[var(--primary-gold)] transition-colors font-medium ${isActive ? 'text-[var(--primary-gold)]' : ''}`
+                `text-[var(--foreground)] hover:text-primary transition-colors font-medium ${isActive ? 'text-primary' : ''}`
             }
         >
             {label}

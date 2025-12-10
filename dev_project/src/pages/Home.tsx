@@ -9,7 +9,7 @@ export default function Home() {
                 <div className="container mx-auto max-w-7xl">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         <div className="lg:col-span-8 animate-fade-in-up">
-                            <h2 className="text-secondary-gold font-bold tracking-widest uppercase mb-6 text-sm md:text-base">
+                            <h2 className="text-primary font-bold tracking-widest uppercase mb-6 text-sm md:text-base">
                                 專業舞蹈藝術中心
                             </h2>
                             <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-bold leading-[0.9] tracking-tight mb-8">
@@ -35,8 +35,12 @@ export default function Home() {
                             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-full blur-3xl opacity-30 animate-pulse"></div>
                             {/* We can use a real image here later */}
                             <div className="relative z-10 w-full h-full border border-white/10 rounded-2xl overflow-hidden bg-surface/50 backdrop-blur-sm p-6 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                                <div className="h-full w-full bg-gray-800/50 rounded-xl flex items-center justify-center text-gray-500">
-                                    [Hero Visual]
+                                <div className="h-full w-full bg-gray-800/50 rounded-xl flex items-center justify-center text-gray-500 overflow-hidden">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1546427660-eb346c344ba5?auto=format&fit=crop&w=800&q=80"
+                                        alt="Professional Dance"
+                                        className="w-full h-full object-cover opacity-80"
+                                    />
                                 </div>
                             </div>
                         </div>

@@ -57,10 +57,30 @@ export default function Venue() {
                 <div className="space-y-8">
                     <h2 className="text-3xl font-bold text-center">空間展示</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="h-64 bg-gray-800 rounded-lg flex items-center justify-center text-gray-500">[教室內部照片]</div>
-                        <div className="h-64 bg-gray-800 rounded-lg flex items-center justify-center text-gray-500">[休息區照片]</div>
-                        <div className="h-64 bg-gray-800 rounded-lg flex items-center justify-center text-gray-500">[更衣室照片]</div>
-                        <div className="h-64 bg-gray-800 rounded-lg flex items-center justify-center text-gray-500">[櫃台接待區照片]</div>
+                        <div className="h-64 bg-gray-800 rounded-lg overflow-hidden relative group">
+                            <img src="https://images.unsplash.com/photo-1551280857-2b9bebdcf204?w=800&q=80" alt="舞蹈教室" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                            <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span className="text-white font-bold">專業教室</span>
+                            </div>
+                        </div>
+                        <div className="h-64 bg-gray-800 rounded-lg overflow-hidden relative group">
+                            <img src="https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?w=800&q=80" alt="休息區" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                            <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span className="text-white font-bold">舒適休息區</span>
+                            </div>
+                        </div>
+                        <div className="h-64 bg-gray-800 rounded-lg overflow-hidden relative group">
+                            <img src="https://images.unsplash.com/photo-1595590424283-b8f17842773f?w=800&q=80" alt="更衣室" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                            <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span className="text-white font-bold">更衣空間</span>
+                            </div>
+                        </div>
+                        <div className="h-64 bg-gray-800 rounded-lg overflow-hidden relative group">
+                            <img src="https://images.unsplash.com/photo-1565514020176-dbf22774906e?w=800&q=80" alt="接待區" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                            <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span className="text-white font-bold">接待大廳</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

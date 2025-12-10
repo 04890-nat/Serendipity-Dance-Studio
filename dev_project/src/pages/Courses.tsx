@@ -95,11 +95,11 @@ export default function Courses() {
                 {/* Filters */}
                 <div className="mb-12 flex flex-col md:flex-row justify-center gap-6">
                     <div className="flex flex-col gap-2">
-                        <label className="text-sm font-bold text-[var(--primary-gold)] uppercase tracking-wider">依舞風篩選</label>
+                        <label className="text-sm font-bold text-primary uppercase tracking-wider">依舞風篩選</label>
                         <select
                             value={selectedCategory}
                             onChange={(e) => setSelectedCategory(e.target.value as Category | 'All')}
-                            className="bg-[var(--surface)] border border-white/10 text-white rounded px-4 py-2 focus:outline-none focus:border-[var(--primary-gold)]"
+                            className="bg-[var(--surface)] border border-white/10 text-white rounded px-4 py-2 focus:outline-none focus:border-primary"
                         >
                             <option value="All">所有舞風</option>
                             <option value="國標舞">國標舞</option>
@@ -111,11 +111,11 @@ export default function Courses() {
                     </div>
 
                     <div className="flex flex-col gap-2">
-                        <label className="text-sm font-bold text-[var(--primary-gold)] uppercase tracking-wider">依程度篩選</label>
+                        <label className="text-sm font-bold text-primary uppercase tracking-wider">依程度篩選</label>
                         <select
                             value={selectedLevel}
                             onChange={(e) => setSelectedLevel(e.target.value as Level | 'All')}
-                            className="bg-[var(--surface)] border border-white/10 text-white rounded px-4 py-2 focus:outline-none focus:border-[var(--primary-gold)]"
+                            className="bg-[var(--surface)] border border-white/10 text-white rounded px-4 py-2 focus:outline-none focus:border-primary"
                         >
                             <option value="All">所有程度</option>
                             <option value="基礎">基礎 (Beginner)</option>
@@ -143,7 +143,7 @@ export default function Courses() {
                         <p className="text-xl">目前沒有符合篩選條件的課程。</p>
                         <button
                             onClick={() => { setSelectedCategory('All'); setSelectedLevel('All'); }}
-                            className="text-[var(--primary-gold)] mt-4 hover:underline"
+                            className="text-primary mt-4 hover:underline"
                         >
                             清除篩選條件
                         </button>
@@ -155,10 +155,10 @@ export default function Courses() {
                     <h2 className="text-3xl font-bold mb-8 text-center text-white">特別活動 & 派對</h2>
                     <div className="bg-[var(--surface)] rounded-2xl p-8 border border-white/5 flex flex-col md:flex-row gap-8 items-center">
                         <div className="w-full md:w-1/3 h-64 bg-gray-800 rounded-xl overflow-hidden relative">
-                            <div className="absolute inset-0 flex items-center justify-center text-gray-600">[活動照片]</div>
+                            <img src="https://images.unsplash.com/photo-1514525253440-b393452e8d26?w=800&q=80" alt="社交舞會" className="w-full h-full object-cover" />
                         </div>
                         <div className="w-full md:w-2/3 space-y-4">
-                            <h3 className="text-2xl font-bold text-[var(--primary-gold)]">週末社交舞會</h3>
+                            <h3 className="text-2xl font-bold text-primary">週末社交舞會</h3>
                             <p className="text-gray-300">
                                 每月舉辦一次的社交舞會，是學員展現成果與交流的最佳場合。
                                 我們提供精緻茶點與優美的音樂，讓您在輕鬆的氛圍中享受舞蹈的樂趣。
