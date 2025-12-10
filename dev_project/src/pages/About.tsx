@@ -10,15 +10,15 @@ export default function About() {
                         <h2 className="text-2xl font-bold mb-6 text-[var(--primary-gold)]">品牌故事</h2>
                         <div className="space-y-6 text-gray-300 leading-relaxed text-lg">
                             <p>
-                                動見舞蹈意識中心成立於新竹，由知名國標舞冠軍 <strong>吳煥然</strong> 老師與 <strong>何柏蓁</strong> 老師共同創辦。
+                                Serendipity Dance Studio (動見舞蹈藝術中心) 成立於新竹，由知名國標舞冠軍 <strong>吳煥然</strong> 老師與 <strong>何柏蓁</strong> 老師共同創辦。
                                 我們致力於打造一個結合專業舞蹈教學與優雅生活美學的空間。
                             </p>
                             <p>
-                                「動見」意味著在動作中看見真實的自己。我們相信，舞蹈不僅僅是肢體的律動，更是一種內在意識的覺醒與表達。
+                                「Serendipity (動見)」意味著在動作中看見真實的自己。我們相信，舞蹈不僅僅是肢體的律動，更是一種內在意識的覺醒與表達。
                                 在這裡，我們提供專業的加拿大楓木地板與頂級的教學環境，讓每一位學員都能在舒適的空間中，享受舞蹈帶來的自信與快樂。
                             </p>
                             <p>
-                                無論您是追求專業競賽表現的舞者，還是希望透過舞蹈提升氣質的愛好者，動見舞蹈藝術中心都是您最值得信賴的選擇。
+                                無論您是追求專業競賽表現的舞者，還是希望透過舞蹈提升氣質的愛好者，Serendipity Dance Studio 都是您最值得信賴的選擇。
                                 我們強調建立歷史與穩定感，讓您在每一次的旋轉與跳躍中，感受到穩固的基礎與無限的可能。
                             </p>
                         </div>

@@ -48,7 +48,7 @@ export default function Home() {
             <section className="py-24 px-6 bg-surface">
                 <div className="container mx-auto max-w-7xl">
                     <div className="mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Moving Insight?</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Serendipity?</h2>
                         <p className="text-xl text-gray-400 max-w-xl">
                             Where Elegance Meets <br />
                             <span className="text-primary font-bold">Professional Excellence</span>

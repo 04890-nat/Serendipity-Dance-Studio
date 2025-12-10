@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
                 {/* Brand */}
                 <div className="space-y-4">
-                    <h3 className="text-2xl font-bold text-[var(--foreground)] tracking-wide">MOVING INSIGHT</h3>
+                    <h3 className="text-2xl font-bold text-[var(--foreground)] tracking-wide">SERENDIPITY</h3>
                     <p className="text-sm">
                         Experience the elegance of dance in a premium environment.
                         <br />
@@ -31,7 +31,7 @@ export default function Footer() {
                     <ul className="space-y-2 text-sm">
                         <li>竹北市光明六路 32 號 2 樓</li>
                         <li>0912-345-678</li>
-                        <li>contact@movinginsight.com</li>
+                        <li>contact@serendipity.com</li>
                         <li>Daily: 10:00 - 22:00</li>
                     </ul>
                 </div>
@@ -50,7 +50,7 @@ export default function Footer() {
             </div>
 
             <div className="container mx-auto px-6 mt-16 pt-8 border-t border-gray-800 text-center text-xs">
-                &copy; {new Date().getFullYear()} Moving Insight Dance & Arts Center. All rights reserved.
+                &copy; {new Date().getFullYear()} Serendipity Dance Studio. All rights reserved.
             </div>
         </footer>
     );

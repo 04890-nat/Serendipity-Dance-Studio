@@ -18,7 +18,7 @@ export default function Navbar() {
         <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled || !isHome ? 'bg-[var(--background)]/90 backdrop-blur-md shadow-md py-4' : 'bg-transparent py-6'}`}>
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <Link to="/" className="text-2xl font-bold tracking-tight">
-                    <span className="text-gradient">MOVING INSIGHT</span>
+                    <span className="text-gradient">SERENDIPITY</span>
                 </Link>
 
                 <div className="hidden md:flex space-x-8 items-center">

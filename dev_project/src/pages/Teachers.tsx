@@ -25,7 +25,7 @@ export default function Teachers() {
                                     <li>國際國標舞公開賽 職業組 冠軍</li>
                                     <li>亞巡賽 台灣站 優異成績表現</li>
                                     <li>多項國內外大型賽事 評審委員</li>
-                                    <li>動見舞蹈藝術中心 創辦人</li>
+                                    <li>Serendipity Dance Studio (動見舞蹈藝術中心) 創辦人</li>
                                 </ul>
                             </div>
                             <div>
@@ -59,7 +59,7 @@ export default function Teachers() {
                                     <li>國際標準舞職業選手</li>
                                     <li>資深舞蹈教育工作者</li>
                                     <li>與吳煥然老師搭檔，征戰國內外無數賽事</li>
-                                    <li>動見舞蹈藝術中心 共同創辦人</li>
+                                    <li>Serendipity Dance Studio (動見舞蹈藝術中心) 共同創辦人</li>
                                 </ul>
                             </div>
                             <div>

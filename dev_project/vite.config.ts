@@ -12,6 +12,7 @@ export default defineConfig({
     },
     base: './', // Use relative paths for GitHub Pages compatibility
     build: {
-        outDir: 'docs',
+        outDir: '../',
+        emptyOutDir: false, // Critical: Prevent deleting the dev_project folder
     },
 })

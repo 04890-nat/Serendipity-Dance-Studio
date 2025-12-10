@@ -8,7 +8,7 @@ export default function Venue() {
                 <div className="bg-[var(--surface)] p-8 rounded-2xl border border-white/5 mb-12">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                         <div className="space-y-4">
-                            <h2 className="text-2xl font-bold text-white">動見舞蹈藝術中心</h2>
+                            <h2 className="text-2xl font-bold text-white">Serendipity Dance Studio</h2>
                             <p className="text-xl text-[var(--primary-gold)] font-medium">
                                 新竹縣竹北市光明路 32 號 2 樓
                             </p>
