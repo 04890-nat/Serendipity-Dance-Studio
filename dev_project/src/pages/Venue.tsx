@@ -10,7 +10,7 @@ export default function Venue() {
                         <div className="space-y-4">
                             <h2 className="text-2xl font-bold text-white">Serendipity Dance Studio</h2>
                             <p className="text-xl text-[var(--primary-gold)] font-medium">
-                                新竹縣竹北市光明路 32 號 2 樓
+                                新竹縣竹北市光明九路 32 號 2 樓
                             </p>
                             <p className="text-gray-400">
                                 位於竹北精華地段，為您打造最舒適、專業的舞蹈學習天堂。
@@ -18,7 +18,7 @@ export default function Venue() {
                         </div>
                         {/* Google Map Placeholder Link Button */}
                         <a
-                            href="https://www.google.com/maps/search/?api=1&query=新竹縣竹北市光明路32號2樓"
+                            href="https://www.google.com/maps/search/?api=1&query=新竹縣竹北市光明九路32號2樓"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn btn-outline"

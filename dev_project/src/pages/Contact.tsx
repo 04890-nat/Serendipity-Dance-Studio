@@ -14,21 +14,21 @@ export default function Contact() {
                                     <span className="text-2xl">📍</span>
                                     <div>
                                         <h4 className="font-bold text-[var(--primary-gold)]">地址</h4>
-                                        <p className="text-gray-300">新竹縣竹北市光明路 32 號 2 樓</p>
+                                        <p className="text-gray-300">新竹縣竹北市光明九路 32 號 2 樓</p>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-4">
                                     <span className="text-2xl">📞</span>
                                     <div>
                                         <h4 className="font-bold text-[var(--primary-gold)]">電話</h4>
-                                        <p className="text-gray-300">0912-345-678</p>
+                                        <p className="text-gray-300">03-558-5581</p>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-4">
                                     <span className="text-2xl">✉️</span>
                                     <div>
                                         <h4 className="font-bold text-[var(--primary-gold)]">Email</h4>
-                                        <p className="text-gray-300">contact@movinginsight.com</p>
+                                        <p className="text-gray-300">serendipitydance.tw@gmail.com</p>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-4">
