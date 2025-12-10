@@ -23,7 +23,7 @@ export default function Navbar() {
 
                 <div className="hidden md:flex space-x-8 items-center">
                     <NavItem to="/about" label="關於我們" />
-                    <NavItem to="/courses" label="課程資訊" />
+                    <NavItem to="/courses" label="課程介紹" />
                     <NavItem to="/achievements" label="學生成果" />
                     <NavItem to="/venue" label="場地設備" />
                     <Link to="/contact" className="btn btn-primary">

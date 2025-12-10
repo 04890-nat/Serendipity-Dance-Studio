@@ -8,16 +8,20 @@ interface CourseProps {
     level: string;
     teacher: string;
     time: string;
-    status: 'Open' | 'Full' | 'Selling Fast' | 'New';
+    status: 'Open' | 'Full' | 'Selling Fast' | 'New' | '招生中' | '已額滿' | '即將額滿' | '新開課';
     tags?: string[];
 }
 
 export default function CourseCard({ course }: { course: CourseProps }) {
-    const statusColor = {
+    const statusColor: Record<string, string> = {
         'Open': 'bg-green-500/20 text-green-400',
+        '招生中': 'bg-green-500/20 text-green-400',
         'Full': 'bg-red-500/20 text-red-400',
+        '已額滿': 'bg-red-500/20 text-red-400',
         'Selling Fast': 'bg-orange-500/20 text-orange-400',
+        '即將額滿': 'bg-orange-500/20 text-orange-400',
         'New': 'bg-blue-500/20 text-blue-400',
+        '新開課': 'bg-blue-500/20 text-blue-400',
     };
 
     return (

@@ -2,10 +2,11 @@ import { useState, useMemo } from 'react';
 import CourseCard from '../components/CourseCard';
 
 // Type Definitions
-type Level = '基礎' | '初級' | '進階' | '大師班' | 'All Levels';
+type Level = '基礎' | '初級' | '進階' | '大師班' | '不限';
 type Category = '國標舞' | '拉丁舞' | '芭蕾舞' | '街舞' | '現代舞' | 'Jazz';
 type Time = '平日晚間' | '平日日間' | '週末';
 
+// Mock Data
 // Mock Data
 const COURSES_DATA = [
     {
@@ -17,7 +18,7 @@ const COURSES_DATA = [
         teacher: "何柏蓁",
         time: "平日晚間",
         timeDetail: "每週三 19:30-21:00",
-        status: "Open",
+        status: "招生中",
         tags: ["試聽課", "熱門課程"]
     },
     {
@@ -29,7 +30,7 @@ const COURSES_DATA = [
         teacher: "吳煥然",
         time: "週末",
         timeDetail: "每週六 14:00-16:00",
-        status: "Selling Fast",
+        status: "即將額滿",
         tags: ["冠軍親授"]
     },
     {
@@ -37,11 +38,11 @@ const COURSES_DATA = [
         title: "成人芭蕾體態雕塑",
         category: "芭蕾舞",
         image: "https://images.unsplash.com/photo-1518834107812-67b0b7c58434?w=800&q=80",
-        level: "All Levels",
+        level: "不限",
         teacher: "專業師資",
         time: "平日晚間",
         timeDetail: "每週二 20:00-21:30",
-        status: "New",
+        status: "新開課",
         tags: ["新開課程"]
     },
     {
@@ -53,7 +54,7 @@ const COURSES_DATA = [
         teacher: "吳煥然",
         time: "平日晚間",
         timeDetail: "每週四 19:30-21:00",
-        status: "Open",
+        status: "招生中",
         tags: []
     },
     {
@@ -65,7 +66,7 @@ const COURSES_DATA = [
         teacher: "專業師資",
         time: "週末",
         timeDetail: "每週日 10:00-11:30",
-        status: "Open",
+        status: "招生中",
         tags: ["兒童專屬"]
     }
 ];

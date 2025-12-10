@@ -10,8 +10,8 @@ export default {
                 background: "#0d0d12",
                 surface: "#16161e",
                 primary: {
-                    DEFAULT: "#D4AF37", // Gold
-                    hover: "#C5A059",
+                    DEFAULT: "#6667AB", // Pantone 2022 Very Peri
+                    hover: "#555691",
                 },
                 accent: {
                     green: "#8ED462", // From reference
