@@ -1,0 +1,43 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+    content: [
+        "./index.html",
+        "./src/**/*.{js,ts,jsx,tsx}",
+    ],
+    theme: {
+        extend: {
+            colors: {
+                background: "#0d0d12",
+                surface: "#16161e",
+                primary: {
+                    DEFAULT: "#D4AF37", // Gold
+                    hover: "#C5A059",
+                },
+                accent: {
+                    green: "#8ED462", // From reference
+                    red: "#ff705d",   // From reference
+                    yellow: "#f5e211",// From reference
+                    blue: "#4b9ff9",  // From reference
+                }
+            },
+            fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+                heading: ['Inter', 'sans-serif'],
+            },
+            borderRadius: {
+                'xl': '1rem',
+                '2xl': '1.5rem',
+            },
+            animation: {
+                'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+            },
+            keyframes: {
+                fadeInUp: {
+                    '0%': { opacity: '0', transform: 'translateY(20px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                }
+            }
+        },
+    },
+    plugins: [],
+}
