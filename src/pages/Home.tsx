@@ -11,11 +11,11 @@ export default function Home() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         <div className="lg:col-span-8 animate-fade-in-up">
                             <h2 className="text-primary font-bold tracking-widest uppercase mb-6 text-sm md:text-base">
-                                專業舞蹈藝術中心
+                                「Serendipity Dance Studio」
                             </h2>
                             <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-bold leading-[0.9] tracking-tight mb-8">
-                                動見 <br />
-                                <span className="text-gradient">舞蹈藝術中心</span>
+                                動見舞蹈 <br />
+                                <span className="text-gradient">藝術中心</span>
                             </h1>
                             <p className="text-gray-400 text-lg md:text-xl max-w-2xl leading-relaxed mb-10">
                                 加入 <strong>吳煥然</strong> 與 <strong>何柏蓁</strong> 老師的行列，體驗舞蹈藝術之美。
