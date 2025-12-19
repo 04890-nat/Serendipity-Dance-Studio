@@ -10,7 +10,7 @@ export default defineConfig({
             '@': path.resolve(__dirname, './src'),
         },
     },
-    base: './', // Use relative paths for GitHub Pages compatibility
+    base: '/Serendipity-Dance-Studio/', // Match GitHub repository name for reliable asset loading
     build: {
         outDir: 'docs',
         emptyOutDir: true,
