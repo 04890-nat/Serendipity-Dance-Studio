@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: #0d0d12;
+    --foreground: #f0f0f0;
+    --primary-gold: #D4AF37; /* Keep for specific highlights if needed, or replace usage */
+}
+
+@layer base {
+    body {
+        @apply bg-background text-white antialiased;
+        font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    }
+}
+
+@layer utilities {
+    .text-gradient {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-white to-primary-hover;
+    }
+
+    .font-heading {
+        font-family: 'Inter', sans-serif;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Button Component Styles */
+.btn {
+    @apply inline-flex items-center justify-center rounded-full transition-all duration-300 font-semibold tracking-wide;
+}
+
+.btn-primary {
+    @apply bg-primary text-black hover:bg-primary-hover hover:scale-105 active:scale-95 shadow-lg shadow-primary/20;
+}
+
+.btn-outline {
+    @apply border border-white/20 hover:bg-white/10 hover:border-white text-white;
+}
