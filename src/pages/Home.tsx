@@ -6,62 +6,93 @@ export default function Home() {
     return (
         <div className="bg-background min-h-screen text-white font-sans overflow-x-hidden">
 
-            {/* Hero Section */}
-            <section className="relative min-h-[90vh] flex items-center pt-32 pb-20 px-6 overflow-hidden">
-                {/* Background Glows */}
-                <div className="absolute top-1/4 -right-20 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] -z-10 animate-pulse"></div>
-                <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px] -z-10"></div>
+            {/* Cinematic Hero Section */}
+            <section className="relative min-h-screen flex items-center pt-20 px-6 overflow-hidden">
+                {/* Background Artistic Elements */}
+                <div className="absolute top-0 right-0 w-[50vw] h-full bg-gradient-to-l from-primary/10 to-transparent -z-10"></div>
+                <div className="absolute -top-24 -right-24 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[160px] -z-10 animate-pulse"></div>
+                <div className="absolute top-1/2 left-0 w-[300px] h-[300px] bg-accent-blue/5 rounded-full blur-[100px] -z-10"></div>
 
-                <div className="container mx-auto max-w-7xl relative z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                        <div className="lg:col-span-7 animate-fade-in-up">
-                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/20 border border-primary/30 text-primary text-sm font-bold uppercase tracking-widest mb-8">
-                                🔥 動見三週年・12/28 校慶展演即將登場
-                            </div>
+                {/* Subtle Grid Background */}
+                <div className="absolute inset-0 opacity-[0.03] pointer-events-none -z-20" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
 
-                            <h1 className="text-7xl md:text-9xl font-bold leading-[0.85] tracking-tighter mb-10">
-                                見證 <br />
-                                <span className="text-gradient">優雅的力量</span>
-                            </h1>
+                <div className="container mx-auto max-w-[1400px] relative z-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-center min-h-[80vh]">
+                        {/* Left Side: Artistic Text Container */}
+                        <div className="lg:col-span-8 z-20 pointer-events-none">
+                            <div className="animate-fade-in-up space-y-8">
+                                <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-primary text-xs font-bold uppercase tracking-[0.3em]">
+                                    <span className="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+                                    動見三週年・12/28 展演即將登場
+                                </div>
 
-                            <p className="text-gray-400 text-xl md:text-2xl max-w-xl leading-relaxed mb-12 italic border-l-2 border-primary/50 pl-6">
-                                「為成功找方法，不為失敗找藉口」
-                            </p>
+                                <div className="relative">
+                                    <h1 className="text-8xl md:text-[11rem] font-black leading-[0.85] tracking-tighter mix-blend-difference">
+                                        見證 <br />
+                                        <span className="text-primary italic font-serif">優雅</span>
+                                        <span className="block">的力量</span>
+                                    </h1>
+                                    <div className="absolute -top-10 -left-10 text-[20rem] font-black text-white/5 -z-10 select-none pointer-events-none">
+                                        ART
+                                    </div>
+                                </div>
 
-                            <p className="text-gray-300 text-lg md:text-xl max-w-xl leading-relaxed mb-12">
-                                由清大雙學士金牌選手 <strong>吳煥然</strong> 老師親自帶領。
-                                在竹北最專業、最漂亮的採光空間，看見您在旋律中綻放藝術線條。
-                            </p>
+                                <div className="max-w-xl space-y-8 pt-8 pointer-events-auto">
+                                    <div className="relative pl-8 border-l-4 border-primary/40">
+                                        <p className="text-2xl md:text-3xl font-medium text-white/90 leading-relaxed italic">
+                                            「為成功找方法，不為失敗找藉口」
+                                        </p>
+                                    </div>
 
-                            <div className="flex flex-wrap gap-6">
-                                <button
-                                    onClick={() => window.open('https://line.me/R/ti/p/%40619wlsxc', '_blank')}
-                                    className="btn btn-primary text-xl px-10 py-5 shadow-2xl shadow-primary/40 hover:scale-105 transition-transform"
-                                >
-                                    立即報名 / 諮詢價格
-                                </button>
-                                <button
-                                    onClick={() => window.open('https://www.facebook.com/SerendipityDanceStudioTW', '_blank')}
-                                    className="btn btn-outline text-xl px-10 py-5 hover:bg-white/5 transition-all"
-                                >
-                                    追蹤最新消息
-                                </button>
+                                    <p className="text-gray-400 text-lg md:text-xl leading-relaxed max-w-lg">
+                                        由清大雙學士金牌選手 <strong>吳煥然</strong> 老師親自帶領。<br />
+                                        在竹北最頂級的藝術空間，與您一同重新定義舞蹈美學。
+                                    </p>
+
+                                    <div className="flex flex-wrap gap-4 pt-4">
+                                        <button
+                                            onClick={() => window.open('https://line.me/R/ti/p/%40619wlsxc', '_blank')}
+                                            className="group relative px-10 py-5 bg-primary text-white rounded-full font-bold text-xl overflow-hidden transition-all hover:pr-14 active:scale-95 shadow-[0_0_40px_rgba(102,103,171,0.3)]"
+                                        >
+                                            <span className="relative z-10">立即報名 / 諮詢價格</span>
+                                            <span className="absolute right-6 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all">→</span>
+                                        </button>
+                                        <button
+                                            onClick={() => window.open('https://www.facebook.com/SerendipityDanceStudioTW', '_blank')}
+                                            className="px-10 py-5 border border-white/10 rounded-full font-bold text-xl hover:bg-white/5 transition-all"
+                                        >
+                                            最新消息
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        {/* Hero Image - Leo in Cape */}
-                        <div className="lg:col-span-5 relative flex justify-center items-center h-full">
-                            <div className="relative w-full max-w-[500px] lg:max-w-none animate-float">
-                                {/* Decorative elements behind the image */}
-                                <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl -z-10 transform scale-125"></div>
+                        {/* Right Side: Massive Image Container */}
+                        <div className="lg:col-span-4 lg:absolute lg:right-[-5%] lg:bottom-0 lg:h-full w-full flex items-end justify-center z-10">
+                            <div className="relative h-[90%] w-full flex items-end justify-center animate-fade-in">
+                                {/* Golden Aura behind image */}
+                                <div className="absolute bottom-[20%] right-[10%] w-[120%] h-[80%] bg-primary/20 rounded-full blur-[120px] -z-10"></div>
+
                                 <img
                                     src={leoCape}
                                     alt="吳煥然老師"
-                                    className="w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(102,103,171,0.5)] transform hover:scale-105 transition-transform duration-700 pointer-events-none"
+                                    className="h-full w-auto object-contain object-bottom drop-shadow-[0_20px_80px_rgba(102,103,171,0.4)] pointer-events-none transform scale-125 origin-bottom transition-transform duration-1000 hover:scale-[1.28]"
                                 />
+
+                                {/* Artistic text behind or around image */}
+                                <div className="absolute top-[20%] right-[-10%] text-white/5 font-black text-9xl vertical-text transform rotate-180 translate-x-20 select-none pointer-events-none">
+                                    LEO WU
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                {/* Vertical Scroll Indicator */}
+                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-50">
+                    <span className="text-[10px] uppercase tracking-[0.5em] font-bold">Scroll</span>
+                    <div className="w-[1px] h-20 bg-gradient-to-b from-primary to-transparent"></div>
                 </div>
             </section>
 
