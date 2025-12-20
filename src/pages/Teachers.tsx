@@ -8,31 +8,26 @@ export default function Teachers() {
                     {/* Wu Huanran */}
                     <div className="group bg-[var(--surface)] rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300">
                         <div className="relative h-96 overflow-hidden">
-                            {/* Placeholder for Teacher Image */}
                             <img src="https://images.unsplash.com/photo-1552062637-642157d6051c?w=800&q=80" alt="吳煥然 老師" className="w-full h-full object-cover object-top" />
-                            {/* Overlay for Name */}
                             <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/90 to-transparent">
-                                <h2 className="text-3xl font-bold text-white mb-1">吳煥然 老師</h2>
-                                <p className="text-primary uppercase tracking-wider text-sm font-bold">Founder / Champion</p>
+                                <h2 className="text-3xl font-bold text-white mb-1">吳煥然 Leo Wu</h2>
+                                <p className="text-primary uppercase tracking-wider text-sm font-bold">Founder / youngest pro in taiwan</p>
                             </div>
                         </div>
                         <div className="p-8 space-y-6">
                             <div>
-                                <h3 className="text-xl font-bold mb-3 text-white">冠軍榮耀 & 專業證明</h3>
+                                <h3 className="text-xl font-bold mb-3 text-white">資歷與榮耀</h3>
                                 <ul className="space-y-2 text-gray-400 text-sm list-disc list-inside">
-                                    <li>國際國標舞公開賽 職業組 冠軍</li>
-                                    <li>亞巡賽 台灣站 優異成績表現</li>
-                                    <li>多項國內外大型賽事 評審委員</li>
-                                    <li>動見舞蹈藝術中心 (Moving Insight Dance Art Center) 創辦人</li>
+                                    <li>專業國標舞評審教練 / 十項全能金牌選手</li>
+                                    <li>18 年舞蹈賽事經驗，連續四屆全運會代表</li>
+                                    <li>國立清華大學 管理、心理雙專長學士</li>
+                                    <li>全國首位以國標舞專長錄取清華大學之學生</li>
                                 </ul>
                             </div>
                             <div>
                                 <h3 className="text-xl font-bold mb-3 text-white">教學風格</h3>
                                 <p className="text-gray-400 text-sm leading-relaxed">
-                                    吳老師的教學強調『基本功』與『音樂性』的結合。他擅長用淺顯易懂的方式解析複雜的舞蹈動作，
-                                    讓初學者也能輕鬆上手，並引導進階學員在舞池中展現霸氣與自信。
-                                    <br /><br />
-                                    在他的課堂上，你不僅學會跳舞，更學會如何成為舞池中的焦點。
+                                    吳老師致力於將「旋律轉化為藝術線條」。他擁有管理與心理學背景，能精準洞察學生的心理狀態與物理阻力，建立獨到的教學方法。課程中風格能動能靜，輕鬆自在卻充滿挑戰，深獲學生喜愛。
                                 </p>
                             </div>
                         </div>
@@ -41,30 +36,26 @@ export default function Teachers() {
                     {/* He Bozhen */}
                     <div className="group bg-[var(--surface)] rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300">
                         <div className="relative h-96 overflow-hidden">
-                            {/* Placeholder for Teacher Image */}
                             <img src="https://images.unsplash.com/photo-1516475429286-465d815a0df7?w=800&q=80" alt="何柏蓁 老師" className="w-full h-full object-cover object-top" />
                             <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/90 to-transparent">
-                                <h2 className="text-3xl font-bold text-white mb-1">何柏蓁 老師</h2>
-                                <p className="text-primary uppercase tracking-wider text-sm font-bold">Co-Founder / Top Instructor</p>
+                                <h2 className="text-3xl font-bold text-white mb-1">何柏蓁 Bozhen He</h2>
+                                <p className="text-primary uppercase tracking-wider text-sm font-bold">Co-Founder / Elite Instructor</p>
                             </div>
                         </div>
                         <div className="p-8 space-y-6">
                             <div>
                                 <h3 className="text-xl font-bold mb-3 text-white">專業經歷</h3>
                                 <ul className="space-y-2 text-gray-400 text-sm list-disc list-inside">
-                                    <li>國際標準舞職業選手</li>
-                                    <li>資深舞蹈教育工作者</li>
-                                    <li>與吳煥然老師搭檔，征戰國內外無數賽事</li>
-                                    <li>動見舞蹈藝術中心 (Moving Insight Dance Art Center) 共同創辦人</li>
+                                    <li>資深國標舞職業組選手</li>
+                                    <li>專注於舞蹈美學與身體線條雕塑</li>
+                                    <li>國內外各大公開賽職業組優異成績</li>
+                                    <li>致力於推廣國標舞與生活美學的結合</li>
                                 </ul>
                             </div>
                             <div>
                                 <h3 className="text-xl font-bold mb-3 text-white">教學風格</h3>
                                 <p className="text-gray-400 text-sm leading-relaxed">
-                                    何老師以細膩的肢體語言與優雅的風格著稱。她特別擅長引導女性學員展現身體的柔美與線條，
-                                    建立足夠的自信與魅力。
-                                    <br /><br />
-                                    她的教學溫柔而堅定，深受貴婦名媛喜愛，是許多學員心目中的優雅典範。
+                                    何老師以細膩的觀察力著稱，擅長引導學生突破身體侷限。其教學方式溫柔而堅定，特別強調在舞蹈中展現自信與柔美線條，讓每位學員都能從零基礎開始體驗舞蹈的魅力。
                                 </p>
                             </div>
                         </div>

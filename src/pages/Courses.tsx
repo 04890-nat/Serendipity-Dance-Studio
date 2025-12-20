@@ -2,176 +2,233 @@ import { useState, useMemo } from 'react';
 import CourseCard from '../components/CourseCard';
 
 // Type Definitions
-type Level = '基礎' | '初級' | '進階' | '大師班' | '不限';
-type Category = '國標舞' | '拉丁舞' | '芭蕾舞' | '街舞' | '現代舞' | 'Jazz';
-type Time = '平日晚間' | '平日日間' | '週末';
+type Level = '基礎' | '初級' | '進階' | '選手' | '不限';
+type Category = '摩登舞' | '拉丁舞' | '社交舞' | '競技專項' | '身心律動';
 
-// Mock Data
-// Mock Data
+// Data from the provided schedule image
 const COURSES_DATA = [
     {
-        id: "waltz-basic",
-        title: "優雅華爾滋基礎班",
-        category: "國標舞",
-        image: "https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=800&q=80",
+        id: "adult-latin-rumba",
+        title: "成人單人拉丁 - Rumba 入門",
+        category: "拉丁舞",
+        image: "https://images.unsplash.com/photo-1545620853-9110499e74fd?w=800&q=80",
         level: "基礎",
-        teacher: "何柏蓁",
-        time: "平日晚間",
-        timeDetail: "每週三 19:30-21:00",
+        teacher: "吳煥然 Leo Wu",
+        time: "週一晚間",
+        timeDetail: "每週一 19:30-20:30",
         status: "招生中",
-        tags: ["試聽課", "熱門課程"]
+        tags: ["零基礎可", "美感訓練"]
     },
     {
-        id: "latin-master",
-        title: "拉丁大師班",
+        id: "adult-latin-samba",
+        title: "成人單人拉丁 - Samba 入門",
         category: "拉丁舞",
         image: "https://images.unsplash.com/photo-1516475429286-465d815a0df7?w=800&q=80",
-        level: "大師班",
-        teacher: "吳煥然",
-        time: "週末",
-        timeDetail: "每週六 14:00-16:00",
-        status: "即將額滿",
-        tags: ["冠軍親授"]
-    },
-    {
-        id: "ballet-adult",
-        title: "成人芭蕾體態雕塑",
-        category: "芭蕾舞",
-        image: "https://images.unsplash.com/photo-1518834107812-67b0b7c58434?w=800&q=80",
-        level: "不限",
-        teacher: "專業師資",
-        time: "平日晚間",
-        timeDetail: "每週二 20:00-21:30",
-        status: "新開課",
-        tags: ["新開課程"]
-    },
-    {
-        id: "tango-int",
-        title: "探戈進階技巧",
-        category: "國標舞",
-        image: "https://images.unsplash.com/photo-1552062637-642157d6051c?w=800&q=80", // Tango image placeholder
-        level: "進階",
-        teacher: "吳煥然",
-        time: "平日晚間",
-        timeDetail: "每週四 19:30-21:00",
-        status: "招生中",
-        tags: []
-    },
-    {
-        id: "kids-hiphop",
-        title: "兒童街舞啟蒙",
-        category: "街舞",
-        image: "https://images.unsplash.com/photo-1535525266644-dc289136932e?w=800&q=80",
         level: "基礎",
-        teacher: "專業師資",
-        time: "週末",
-        timeDetail: "每週日 10:00-11:30",
+        teacher: "吳煥然 Leo Wu",
+        time: "週四晚間",
+        timeDetail: "每週四 20:15-21:15",
         status: "招生中",
-        tags: ["兒童專屬"]
+        tags: ["律動開發", "節奏感"]
+    },
+    {
+        id: "adult-latin-jive",
+        title: "成人單人拉丁 - Jive 入門",
+        category: "拉丁舞",
+        image: "https://images.unsplash.com/photo-1518834107812-67b0b7c58434?w=800&q=80",
+        level: "基礎",
+        teacher: "吳煥然 Leo Wu",
+        time: "週五晚間",
+        timeDetail: "每週五 20:00-21:00",
+        status: "招生中",
+        tags: ["輕快活潑", "心肺訓練"]
+    },
+    {
+        id: "women-latin-comprehensive",
+        title: "女子綜合拉丁",
+        category: "拉丁舞",
+        image: "https://images.unsplash.com/photo-1547153760-18fc86324498?w=1200&q=80",
+        level: "初級",
+        teacher: "專業師資",
+        time: "週二晚間",
+        timeDetail: "每週二 19:00-20:00",
+        status: "熱門",
+        tags: ["貴婦首選", "美體雕塑"]
+    },
+    {
+        id: "adult-comp-latin-mon",
+        title: "成人綜合拉丁 (週一班)",
+        category: "拉丁舞",
+        image: "https://images.unsplash.com/photo-1552062637-642157d6051c?w=800&q=80",
+        level: "初級",
+        teacher: "專業師資",
+        time: "週一午後",
+        timeDetail: "每週一 15:00-16:00",
+        status: "招生中",
+        tags: ["綜合練習", "多元舞風"]
+    },
+    {
+        id: "kids-latin-a",
+        title: "兒童拉丁 A",
+        category: "競技專項",
+        image: "https://images.unsplash.com/photo-1449824913929-233a36b23f2c?w=800&q=80",
+        level: "基礎",
+        teacher: "吳煥然 Leo Wu",
+        time: "週五晚間",
+        timeDetail: "每週五 19:00-20:00",
+        status: "招生中",
+        tags: ["專注力", "協調性"]
+    },
+    {
+        id: "kids-elite",
+        title: "兒童選手班",
+        category: "競技專項",
+        image: "https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=800&q=80",
+        level: "選手",
+        teacher: "吳煥然 Leo Wu",
+        time: "週六午前",
+        timeDetail: "每週六 09:00-11:00",
+        status: "專業組",
+        tags: ["比賽培訓", "菁英計畫"]
+    },
+    {
+        id: "latin-couple-skill",
+        title: "拉丁雙人技巧班",
+        category: "競技專項",
+        image: "https://images.unsplash.com/photo-1516475429286-465d815a0df7?w=800&q=80",
+        level: "進階",
+        teacher: "吳煥然 Leo Wu",
+        time: "週六午後",
+        timeDetail: "每週六 13:00-14:30",
+        status: "進階訓練",
+        tags: ["雙人默契", "技術精進"]
+    },
+    {
+        id: "gyrokinesis",
+        title: "禪柔 GYROKINESIS",
+        category: "身心律動",
+        image: "https://images.unsplash.com/photo-1518611012118-29a8d63ee0c2?w=800&q=80",
+        level: "不限",
+        teacher: "專業團體班",
+        time: "週四午後",
+        timeDetail: "每週四 14:00-15:30",
+        status: "招生中",
+        tags: ["身心連結", "脊椎活動"]
     }
 ];
 
 export default function Courses() {
     const [selectedCategory, setSelectedCategory] = useState<Category | 'All'>('All');
-    const [selectedLevel, setSelectedLevel] = useState<Level | 'All'>('All');
 
     const filteredCourses = useMemo(() => {
         return COURSES_DATA.filter(course => {
-            const matchCategory = selectedCategory === 'All' || course.category === selectedCategory;
-            const matchLevel = selectedLevel === 'All' || course.level === selectedLevel;
-            return matchCategory && matchLevel;
+            return selectedCategory === 'All' || course.category === selectedCategory;
         });
-    }, [selectedCategory, selectedLevel]);
+    }, [selectedCategory]);
+
+    const handleLineClick = () => {
+        window.open('https://line.me/R/ti/p/%40619wlsxc', '_blank');
+    };
 
     return (
         <div className="min-h-screen pt-24 pb-12 bg-[var(--background)]">
             <div className="container mx-auto px-6">
-                <h1 className="text-4xl font-bold mb-4 text-gradient text-center">課程資訊</h1>
-                <p className="text-gray-300 mb-12 text-center max-w-2xl mx-auto">
-                    無論您是初學者還是進階舞者，我們都有適合您的課程。
-                    透過下方的篩選器找到您心儀的課程，開始您的舞蹈旅程。
-                </p>
-
-                {/* Filters */}
-                <div className="mb-12 flex flex-col md:flex-row justify-center gap-6">
-                    <div className="flex flex-col gap-2">
-                        <label className="text-sm font-bold text-primary uppercase tracking-wider">依舞風篩選</label>
-                        <select
-                            value={selectedCategory}
-                            onChange={(e) => setSelectedCategory(e.target.value as Category | 'All')}
-                            className="bg-[var(--surface)] border border-white/10 text-white rounded px-4 py-2 focus:outline-none focus:border-primary"
-                        >
-                            <option value="All">所有舞風</option>
-                            <option value="國標舞">國標舞</option>
-                            <option value="拉丁舞">拉丁舞</option>
-                            <option value="芭蕾舞">芭蕾舞</option>
-                            <option value="街舞">街舞</option>
-                            <option value="現代舞">現代舞</option>
-                        </select>
-                    </div>
-
-                    <div className="flex flex-col gap-2">
-                        <label className="text-sm font-bold text-primary uppercase tracking-wider">依程度篩選</label>
-                        <select
-                            value={selectedLevel}
-                            onChange={(e) => setSelectedLevel(e.target.value as Level | 'All')}
-                            className="bg-[var(--surface)] border border-white/10 text-white rounded px-4 py-2 focus:outline-none focus:border-primary"
-                        >
-                            <option value="All">所有程度</option>
-                            <option value="基礎">基礎 (Beginner)</option>
-                            <option value="初級">初級 (Elementary)</option>
-                            <option value="進階">進階 (Intermediate)</option>
-                            <option value="大師班">大師班 (Master)</option>
-                        </select>
-                    </div>
-                </div>
-
-                {/* Course Grid */}
-                {filteredCourses.length > 0 ? (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {filteredCourses.map(course => (
-                            // @ts-ignore - Ignoring strict type check for now to match component props
-                            <CourseCard key={course.id} course={{
-                                ...course,
-                                time: course.timeDetail, // Map timeDetail to time prop for card
-                                // Map status string to specific union type if needed, or update CourseCard types
-                            }} />
-                        ))}
-                    </div>
-                ) : (
-                    <div className="text-center py-24 text-gray-500">
-                        <p className="text-xl">目前沒有符合篩選條件的課程。</p>
-                        <button
-                            onClick={() => { setSelectedCategory('All'); setSelectedLevel('All'); }}
-                            className="text-primary mt-4 hover:underline"
-                        >
-                            清除篩選條件
+                <header className="mb-16 text-center max-w-4xl mx-auto">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gradient italic">為成功找方法，不為失敗找藉口</h1>
+                    <p className="text-gray-300 text-lg leading-relaxed">
+                        動見舞蹈藝術中心精心規劃多元課程。從優雅貴婦拉丁、兒童菁英選手到身心舒緩的禪柔。
+                        我們強調高強度的專業指導，對待學員如友，共同邁向專業舞蹈之門。
+                    </p>
+                    <div className="mt-8 flex flex-wrap justify-center gap-4">
+                        <button onClick={handleLineClick} className="btn btn-primary px-10 py-4 shadow-xl shadow-primary/20">
+                            💬 LINE 預約與價格諮詢
                         </button>
                     </div>
-                )}
+                </header>
 
-                {/* Additional Activity Section */}
-                <div className="mt-24 pt-12 border-t border-white/10">
-                    <h2 className="text-3xl font-bold mb-8 text-center text-white">特別活動 & 派對</h2>
-                    <div className="bg-[var(--surface)] rounded-2xl p-8 border border-white/5 flex flex-col md:flex-row gap-8 items-center">
-                        <div className="w-full md:w-1/3 h-64 bg-gray-800 rounded-xl overflow-hidden relative">
-                            <img src="https://images.unsplash.com/photo-1514525253440-b393452e8d26?w=800&q=80" alt="社交舞會" className="w-full h-full object-cover" />
-                        </div>
-                        <div className="w-full md:w-2/3 space-y-4">
-                            <h3 className="text-2xl font-bold text-primary">週末社交舞會</h3>
-                            <p className="text-gray-300">
-                                每月舉辦一次的社交舞會，是學員展現成果與交流的最佳場合。
-                                我們提供精緻茶點與優美的音樂，讓您在輕鬆的氛圍中享受舞蹈的樂趣。
-                            </p>
-                            <ul className="space-y-2 text-sm text-gray-400">
-                                <li>• 定期品酒會</li>
-                                <li>• 節慶主題派對</li>
-                                <li>• 國際大師講座</li>
-                            </ul>
-                        </div>
-                    </div>
+                {/* Categories */}
+                <div className="flex flex-wrap justify-center gap-4 mb-12">
+                    {['All', '拉丁舞', '競技專項', '身心律動'].map((cat) => (
+                        <button
+                            key={cat}
+                            onClick={() => setSelectedCategory(cat as any)}
+                            className={`px-6 py-2 rounded-full border transition-all ${selectedCategory === cat
+                                ? 'bg-primary border-primary text-white'
+                                : 'border-white/10 text-gray-400 hover:border-primary/50'
+                                }`}
+                        >
+                            {cat === 'All' ? '全部課程' : cat}
+                        </button>
+                    ))}
                 </div>
 
+                {/* Pricing Policy Notice */}
+                <div className="mb-12 bg-surface/50 p-6 rounded-2xl border border-primary/20 text-center">
+                    <p className="text-gray-400">
+                        為了維護教學品質與提供最合適的建議，所有課程價格統一由 <strong className="text-white">LINE 或現場諮詢</strong>。
+                        我們也歡迎 <strong>個人課預約、團體包班、企業合作</strong>，滿四位即可開班！
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {filteredCourses.map(course => (
+                        <div key={course.id} className="group bg-surface rounded-3xl overflow-hidden border border-white/5 hover:border-primary/30 transition-all duration-500">
+                            <div className="relative h-64 overflow-hidden">
+                                <img src={course.image} alt={course.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-40"></div>
+                                <div className="absolute top-4 left-4">
+                                    <span className="bg-black/60 backdrop-blur-md text-primary text-[10px] font-bold px-3 py-1 rounded-full border border-primary/30 uppercase tracking-widest leading-none">
+                                        {course.category}
+                                    </span>
+                                </div>
+                                <div className="absolute bottom-4 left-4 flex gap-2">
+                                    {course.tags.map(tag => (
+                                        <span key={tag} className="text-[10px] bg-primary/20 text-primary px-2 py-0.5 rounded border border-primary/10">{tag}</span>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="p-8">
+                                <div className="flex justify-between items-start mb-4">
+                                    <h3 className="text-xl font-bold text-white leading-tight">{course.title}</h3>
+                                    <span className="text-[10px] text-accent-yellow border border-accent-yellow/30 px-2 py-0.5 rounded shrink-0">{course.status}</span>
+                                </div>
+                                <div className="space-y-3 mb-8">
+                                    <div className="flex items-center text-sm gap-2">
+                                        <span className="text-gray-500">指導：</span>
+                                        <span className="text-gray-300">{course.teacher}</span>
+                                    </div>
+                                    <div className="flex items-center text-sm gap-2">
+                                        <span className="text-gray-500">時段：</span>
+                                        <span className="text-gray-300">{course.timeDetail}</span>
+                                    </div>
+                                    <div className="flex items-center text-sm gap-2 bg-white/5 p-2 rounded-lg">
+                                        <span className="text-primary font-bold">💳 價目諮詢：</span>
+                                        <button onClick={handleLineClick} className="text-primary hover:underline">私訊 LINE 洽詢 &rarr;</button>
+                                    </div>
+                                </div>
+                                <button onClick={handleLineClick} className="w-full bg-white/5 hover:bg-primary hover:text-white text-gray-300 p-4 rounded-xl font-bold transition-all text-sm">
+                                    了解課程細節
+                                </button>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Additional USPs */}
+                <div className="mt-24 grid grid-cols-1 md:grid-cols-4 gap-8">
+                    {[
+                        { title: '竹北核心最專業', desc: '環境美、採光佳，採用頂級加拿大楓木地板，緊鄰東元醫院停車場。', icon: '💎' },
+                        { title: '一站式代購服務', desc: '提供完整專業舞鞋、練舞服代購服務，從頭到腳在動見一條龍完成。', icon: '🛍️' },
+                        { title: '溫馨家長休息區', desc: '備有舒適沙發、茶水間、淋浴空間及高級化妝室，陪伴不累。', icon: '🛋️' },
+                        { title: '不定時試聽體驗', desc: '對課程感興趣？歡迎透過 LINE@ 聯繫，了解最新試聽與開班資訊。', icon: '✉️' }
+                    ].map((item, i) => (
+                        <div key={i} className="text-center p-8 rounded-3xl bg-surface/30 border border-white/5">
+                            <div className="text-4xl mb-4">{item.icon}</div>
+                            <h4 className="text-xl font-bold text-white mb-2">{item.title}</h4>
+                            <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
