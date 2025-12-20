@@ -1,3 +1,7 @@
+import classAction from '../assets/images/class-action.png';
+import leoCape from '../assets/images/leo-cape.png';
+import danceCouple from '../assets/images/dance-couple.png';
+
 export default function About() {
     return (
         <div className="min-h-screen pt-24 pb-12 bg-[var(--background)]">
@@ -31,8 +35,8 @@ export default function About() {
                                 <p className="text-white font-bold">動見舞蹈：在優雅中看見卓越</p>
                             </div>
                             <img
-                                src="https://images.unsplash.com/photo-1547153760-18fc86324498?w=1200&q=80"
-                                alt="Studio Interior"
+                                src={classAction}
+                                alt="Studio Action"
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                             />
                         </div>
@@ -80,7 +84,7 @@ export default function About() {
                         <div className="group bg-[var(--surface)] overflow-hidden rounded-3xl border border-white/5 hover:border-primary/30 transition-all duration-500">
                             <div className="aspect-[4/5] bg-gray-900 overflow-hidden relative">
                                 <img
-                                    src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=800&q=80"
+                                    src={leoCape}
                                     alt="吳煥然 老師"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
@@ -103,7 +107,7 @@ export default function About() {
                         <div className="group bg-[var(--surface)] overflow-hidden rounded-3xl border border-white/5 hover:border-primary/30 transition-all duration-500">
                             <div className="aspect-[4/5] bg-gray-900 overflow-hidden relative">
                                 <img
-                                    src="https://images.unsplash.com/photo-1518834107812-67b0b7c58434?w=800&q=80"
+                                    src={danceCouple}
                                     alt="何柏蓁 老師"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />

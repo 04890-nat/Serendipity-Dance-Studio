@@ -1,3 +1,8 @@
+import eventGroup from '../assets/images/event-group.png';
+import eventHuddle from '../assets/images/event-huddle.png';
+import classAction from '../assets/images/class-action.png';
+import trophyPhoto from '../assets/images/trophy-photo.jpg';
+
 export default function Achievements() {
     return (
         <div className="min-h-screen pt-24 pb-12 bg-[var(--background)]">
@@ -32,7 +37,7 @@ export default function Achievements() {
                             </button>
                         </div>
                         <div className="aspect-video bg-gray-800 rounded-2xl overflow-hidden shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1545620853-9110499e74fd?w=800&q=80" alt="Anniversary Poster" className="w-full h-full object-cover" />
+                            <img src={eventGroup} alt="Anniversary Event" className="w-full h-full object-cover" />
                         </div>
                     </div>
                 </div>
@@ -109,21 +114,21 @@ export default function Achievements() {
                         <h2 className="text-2xl font-bold text-white mb-8">演出與比賽影音紀錄</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             <div className="group relative aspect-video bg-gray-800 rounded-xl overflow-hidden cursor-pointer" onClick={() => window.open('https://www.youtube.com/watch?v=iwdFy-iVgNQ', '_blank')}>
-                                <img src="https://images.unsplash.com/photo-1516475429286-465d815a0df7?w=800&q=80" alt="2025竹北市長盃" className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" />
+                                <img src={trophyPhoto} alt="2025竹北市長盃" className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" />
                                 <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-4 text-center">
                                     <span className="text-primary text-sm font-bold mb-2">YouTube 回顧</span>
                                     <span className="text-white text-lg font-bold">🎬 2025 竹北市長盃</span>
                                 </div>
                             </div>
                             <div className="group relative aspect-video bg-gray-800 rounded-xl overflow-hidden cursor-pointer" onClick={() => window.open('https://www.youtube.com/watch?v=Y0-DN9sDHtA', '_blank')}>
-                                <img src="https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=800&q=80" alt="2024竹北市長盃" className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" />
+                                <img src={eventHuddle} alt="2024竹北市長盃" className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" />
                                 <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-4 text-center">
                                     <span className="text-primary text-sm font-bold mb-2">YouTube 回顧</span>
                                     <span className="text-white text-lg font-bold">🎬 2024 竹北市長盃</span>
                                 </div>
                             </div>
                             <div className="group relative aspect-video bg-gray-800 rounded-xl overflow-hidden cursor-pointer" onClick={() => window.open('https://www.youtube.com/watch?v=D2XTBT7J8Eg', '_blank')}>
-                                <img src="https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=800&q=80" alt="2023聖誕發表" className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" />
+                                <img src={classAction} alt="2023聖誕發表" className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" />
                                 <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-4 text-center">
                                     <span className="text-primary text-sm font-bold mb-2">YouTube 回顧</span>
                                     <span className="text-white text-lg font-bold">🎬 2023 聖誕成果發表</span>

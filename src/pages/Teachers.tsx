@@ -1,3 +1,6 @@
+import leoCape from '../assets/images/leo-cape.png';
+import danceCouple from '../assets/images/dance-couple.png';
+
 export default function Teachers() {
     return (
         <div className="min-h-screen pt-24 pb-12 bg-[var(--background)]">
@@ -8,7 +11,7 @@ export default function Teachers() {
                     {/* Wu Huanran */}
                     <div className="group bg-[var(--surface)] rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300">
                         <div className="relative h-96 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1552062637-642157d6051c?w=800&q=80" alt="吳煥然 老師" className="w-full h-full object-cover object-top" />
+                            <img src={leoCape} alt="吳煥然 老師" className="w-full h-full object-cover object-top" />
                             <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/90 to-transparent">
                                 <h2 className="text-3xl font-bold text-white mb-1">吳煥然 Leo Wu</h2>
                                 <p className="text-primary uppercase tracking-wider text-sm font-bold">Founder / youngest pro in taiwan</p>
@@ -36,7 +39,7 @@ export default function Teachers() {
                     {/* He Bozhen */}
                     <div className="group bg-[var(--surface)] rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300">
                         <div className="relative h-96 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1516475429286-465d815a0df7?w=800&q=80" alt="何柏蓁 老師" className="w-full h-full object-cover object-top" />
+                            <img src={danceCouple} alt="何柏蓁 老師" className="w-full h-full object-cover object-top" />
                             <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/90 to-transparent">
                                 <h2 className="text-3xl font-bold text-white mb-1">何柏蓁 Bozhen He</h2>
                                 <p className="text-primary uppercase tracking-wider text-sm font-bold">Co-Founder / Elite Instructor</p>

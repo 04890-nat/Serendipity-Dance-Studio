@@ -1,5 +1,10 @@
 import { useState, useMemo } from 'react';
 import CourseCard from '../components/CourseCard';
+import classAction from '../assets/images/class-action.png';
+import eventGroup from '../assets/images/event-group.png';
+import eventHuddle from '../assets/images/event-huddle.png';
+import leoCape from '../assets/images/leo-cape.png';
+import danceCouple from '../assets/images/dance-couple.png';
 
 // Type Definitions
 type Level = '基礎' | '初級' | '進階' | '選手' | '不限';
@@ -11,7 +16,7 @@ const COURSES_DATA = [
         id: "adult-latin-rumba",
         title: "成人單人拉丁 - Rumba 入門",
         category: "拉丁舞",
-        image: "https://images.unsplash.com/photo-1545620853-9110499e74fd?w=800&q=80",
+        image: leoCape,
         level: "基礎",
         teacher: "吳煥然 Leo Wu",
         time: "週一晚間",
@@ -23,7 +28,7 @@ const COURSES_DATA = [
         id: "adult-latin-samba",
         title: "成人單人拉丁 - Samba 入門",
         category: "拉丁舞",
-        image: "https://images.unsplash.com/photo-1516475429286-465d815a0df7?w=800&q=80",
+        image: classAction,
         level: "基礎",
         teacher: "吳煥然 Leo Wu",
         time: "週四晚間",
@@ -35,7 +40,7 @@ const COURSES_DATA = [
         id: "adult-latin-jive",
         title: "成人單人拉丁 - Jive 入門",
         category: "拉丁舞",
-        image: "https://images.unsplash.com/photo-1518834107812-67b0b7c58434?w=800&q=80",
+        image: eventHuddle,
         level: "基礎",
         teacher: "吳煥然 Leo Wu",
         time: "週五晚間",
@@ -47,7 +52,7 @@ const COURSES_DATA = [
         id: "women-latin-comprehensive",
         title: "女子綜合拉丁",
         category: "拉丁舞",
-        image: "https://images.unsplash.com/photo-1547153760-18fc86324498?w=1200&q=80",
+        image: danceCouple,
         level: "初級",
         teacher: "專業師資",
         time: "週二晚間",
@@ -59,7 +64,7 @@ const COURSES_DATA = [
         id: "adult-comp-latin-mon",
         title: "成人綜合拉丁 (週一班)",
         category: "拉丁舞",
-        image: "https://images.unsplash.com/photo-1552062637-642157d6051c?w=800&q=80",
+        image: eventGroup,
         level: "初級",
         teacher: "專業師資",
         time: "週一午後",
@@ -71,7 +76,7 @@ const COURSES_DATA = [
         id: "kids-latin-a",
         title: "兒童拉丁 A",
         category: "競技專項",
-        image: "https://images.unsplash.com/photo-1449824913929-233a36b23f2c?w=800&q=80",
+        image: classAction,
         level: "基礎",
         teacher: "吳煥然 Leo Wu",
         time: "週五晚間",
@@ -83,7 +88,7 @@ const COURSES_DATA = [
         id: "kids-elite",
         title: "兒童選手班",
         category: "競技專項",
-        image: "https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=800&q=80",
+        image: eventHuddle,
         level: "選手",
         teacher: "吳煥然 Leo Wu",
         time: "週六午前",
@@ -95,7 +100,7 @@ const COURSES_DATA = [
         id: "latin-couple-skill",
         title: "拉丁雙人技巧班",
         category: "競技專項",
-        image: "https://images.unsplash.com/photo-1516475429286-465d815a0df7?w=800&q=80",
+        image: danceCouple,
         level: "進階",
         teacher: "吳煥然 Leo Wu",
         time: "週六午後",
@@ -107,7 +112,7 @@ const COURSES_DATA = [
         id: "gyrokinesis",
         title: "禪柔 GYROKINESIS",
         category: "身心律動",
-        image: "https://images.unsplash.com/photo-1518611012118-29a8d63ee0c2?w=800&q=80",
+        image: classAction,
         level: "不限",
         teacher: "專業團體班",
         time: "週四午後",
