@@ -20,14 +20,14 @@ export default function About() {
                                 「為成功找方法，不為失敗找藉口。」
                             </blockquote>
                             <p>
-                                動見舞蹈藝術中心 (Serendipity Dance Studio) 由台灣最年輕的國標舞職業選手 <strong>吳煥然</strong> 老師創立。
+                                動見舞蹈藝術中心 (Serendipity Dance Studio) 由台灣金牌選手 <strong>吳煥然</strong> 老師創辦。
                                 「動見」的含義是「在動作中看見真實的自己」，不僅是一間教室，更是吳老師傳遞「家」的溫度的藝術港灣。
                             </p>
                             <p>
-                                我們座落於竹北，致力於將國標舞從運動昇華為藝術。煥然老師以最認真的態度看待每一位學生，給予高強度的個別指導，在專業要求中同時如好友般親切。
+                                我們座落於竹北，致力於將國標舞從運動昇華為藝術。煥然老師以專業的態度看待每一位學員，給予高強度的個別指導，在專業要求中同時如好友般親切。
                             </p>
                             <p>
-                                我們的長期願景是朝向 <strong>「專業舞蹈藝術團」</strong> 發展，提供專業表演、活動指導與舞蹈編排，讓國標舞在台灣展現無邊際的藝術美感。
+                                我們的長期願景是朝向 <strong>「專業舞蹈藝術團」</strong> 發展，提供專業表演與舞蹈編排，讓國標舞展現極致的藝術美感。
                             </p>
                         </div>
                         <div className="bg-surface p-1 rounded-2xl border border-white/5 overflow-hidden aspect-video relative group">
@@ -115,7 +115,7 @@ export default function About() {
                             </div>
                             <div className="p-8">
                                 <h3 className="text-2xl font-bold mb-2 text-white">何柏蓁 Bozhen He</h3>
-                                <p className="text-primary font-medium mb-4">共同創辦人 / 資深職業舞者</p>
+                                <p className="text-primary font-medium mb-4">核心師資 / 資深職業舞者</p>
                                 <p className="text-gray-400 leading-relaxed mb-6">
                                     專注於舞蹈美學與女性體態雕塑，與吳煥然老師共同征戰國內外各大賽事，以細膩的教學風格帶領學員展現魅力。
                                 </p>

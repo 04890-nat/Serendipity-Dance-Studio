@@ -5,6 +5,7 @@ import eventGroup from '../assets/images/event-group.png';
 import eventHuddle from '../assets/images/event-huddle.png';
 import leoCape from '../assets/images/leo-cape.png';
 import danceCouple from '../assets/images/dance-couple.png';
+import scheduleImage from '../assets/images/schedule-image.png';
 
 // Type Definitions
 type Level = '基礎' | '初級' | '進階' | '選手' | '不限';
@@ -150,6 +151,14 @@ export default function Courses() {
                         </button>
                     </div>
                 </header>
+
+                {/* Physical Schedule Reference */}
+                <div className="mb-16">
+                    <h2 className="text-2xl font-bold text-white mb-6 text-center">每週課表一覽</h2>
+                    <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
+                        <img src={scheduleImage} alt="動見舞蹈課表" className="w-full h-auto" />
+                    </div>
+                </div>
 
                 {/* Categories */}
                 <div className="flex flex-wrap justify-center gap-4 mb-12">
