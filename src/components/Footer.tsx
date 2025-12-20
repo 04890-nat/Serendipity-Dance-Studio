@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
     const handleLineClick = () => {
-        window.open('https://line.me/R/ti/p/@your-studio-id', '_blank');
+        window.open('https://line.me/R/ti/p/%40619wlsxc', '_blank');
     };
 
     return (
