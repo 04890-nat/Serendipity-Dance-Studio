@@ -12,7 +12,7 @@ export default defineConfig({
     },
     base: './', // Use relative paths for maximum compatibility across different deployment paths
     build: {
-        outDir: 'docs',
+        outDir: 'dist',
         emptyOutDir: true,
     },
 })
